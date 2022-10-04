@@ -46,7 +46,7 @@ class User(MethodView):
         db.session.commit()
         return {"message": "User delete"}, 200
 
-@user_blueprint.route("/refresh")
+
 class TokenRefresh(MethodView):
     @jwt_required(refresh=True)
     def post(self):
